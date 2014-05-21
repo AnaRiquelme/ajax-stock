@@ -138,7 +138,7 @@
                     yearSuffix: ''};
                 $.datepicker.setDefaults($.datepicker.regional['es']);
             });
-
+            // TRABAJANDO EN LA RAMA TIPOPRODUCTO
             //para solucionar el bug de la autollamada recursiva 
             //muy dificil de encontrar y depurar
             //dos modales a la vez se pasan el foco de una a la otra
