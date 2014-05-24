@@ -155,22 +155,22 @@ var control_tipoproducto_list = function(path) {
             } else {
                 $(prefijo_div + '.btn.btn-mini.action01').unbind('click');
                 $(prefijo_div + '.btn.btn-mini.action01').click(function() {
-                    loadDivView(view, prefijo_div + '#datos2', $(this).attr('id'));
+                    loadDivView(view,'#datos2', $(this).attr('id'));
                 });
 
                 $(prefijo_div + '.btn.btn-mini.action02').unbind('click');
                 $(prefijo_div + '.btn.btn-mini.action02').click(function() {
-                    loadModalView(view, prefijo_div + '#modal01', $(this).attr('id'));
+                    loadModalView(view, '#modal01', $(this).attr('id'));
                 });
 
                 $(prefijo_div + '.btn.btn-mini.action03').unbind('click');
                 $(prefijo_div + '.btn.btn-mini.action03').click(function() {
-                    loadModalForm(view, prefijo_div + '#modal01', $(this).attr('id'), "edit");
+                    loadModalForm(view, '#modal01', $(this).attr('id'), "edit");
                 });
 
                 $(prefijo_div + '.btn.btn-mini.action04').unbind('click');
                 $(prefijo_div + '.btn.btn-mini.action04').click(function() {
-                    removeConfirmationModalForm(view, prefijo_div + '#modal01', $(this).attr('id'));
+                    removeConfirmationModalForm(view, '#modal01', $(this).attr('id'));
                 });
             }
 
