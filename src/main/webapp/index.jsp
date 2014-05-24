@@ -138,7 +138,7 @@
                     yearSuffix: ''};
                 $.datepicker.setDefaults($.datepicker.regional['es']);
             });
-
+            // TRABAJANDO EN LA RAMA TIPOPRODUCTO
             //para solucionar el bug de la autollamada recursiva 
             //muy dificil de encontrar y depurar
             //dos modales a la vez se pasan el foco de una a la otra
@@ -170,6 +170,18 @@
 
                     var productoControl = control_producto_list('<%=request.getContextPath()%>');
                     productoControl.inicia(productoView, 1, null, null, 10, null, null, null, null);
+                    return false;
+                });
+                $('#lnkTipoProducto').unbind('click');
+                $('#lnkTipoProducto').click(function() {
+                    var tipoproducto = objeto('tipoproducto', '<%=request.getContextPath()%>');
+                    var tipoproductoView = vista(tipoproducto, '<%=request.getContextPath()%>');
+
+                    $('#indexContenidoJsp').empty();
+                    $('#indexContenido').empty().append(tipoproductoView.getEmptyList());
+
+                    var tipoproductoControl = control_tipoproducto_list('<%=request.getContextPath()%>');
+                    tipoproductoControl.inicia(tipoproductoView, 1, null, null, 10, null, null, null, null);
                     return false;
                 });
             });
