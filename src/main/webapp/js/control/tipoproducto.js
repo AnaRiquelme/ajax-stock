@@ -47,9 +47,10 @@ var control_tipoproducto_list = function(path) {
         if (action == "edit") {
             view.doFillForm(id);
         } else {
-            $('#id').val('0').attr("disabled", true);
-            //$('#nombre').focus();
+            $(prefijo_div + '#id').val('0').attr("disabled", true);
+            $(prefijo_div + '#codigo').focus();
         }
+        
         $('#submitForm').unbind('click');
         $('#submitForm').click(function(event) {
             enviarDatosUpdateForm(view, id);
